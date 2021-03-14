@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Nav isHome />
       <header>
-        <section className="mt-16 bg-gray-50">
+        <section className="mt-16 px-8 bg-gray-50">
           <div className="wrapper flex justify-between">
             <div className="flex-1 flex flex-col justify-center mr-20">
               <h1>We’re here to help</h1>
@@ -60,75 +60,89 @@ export default function Home() {
             </a>
           </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-rose-100 text-rose-700 group-hover:bg-rose-700 group-hover:text-white">
-              <PulseIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Pulse</p>
-            <p className="opacity-60 text-sm ">
-              Monitor and Coach agents in real time.
-            </p>
-          </div>
+          <Link href="/pulse">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-rose-100 text-rose-700 group-hover:bg-rose-700 group-hover:text-white">
+                <PulseIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Pulse</p>
+              <p className="opacity-60 text-sm ">
+                Monitor and Coach agents in real time.
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-indigo-100 text-indigo-700 group-hover:bg-indigo-700 group-hover:text-white">
-              <StudioIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Studio</p>
-            <p className="opacity-60 text-sm">
-              Design Smart IVRs, Chatbot and Voicebot
-            </p>
-          </div>
+          <Link href="/studio">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-indigo-100 text-indigo-700 group-hover:bg-indigo-700 group-hover:text-white">
+                <StudioIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Studio</p>
+              <p className="opacity-60 text-sm">
+                Design Smart IVRs, Chatbot and Voicebot
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-green-100 text-green-700 group-hover:bg-green-700 group-hover:text-white">
-              <AutoDialIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Playbooks</p>
-            <p className="opacity-60 text-sm">
-              Supercharge prospecting and service
-            </p>
-          </div>
+          <Link href="/autodial">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-green-100 text-green-700 group-hover:bg-green-700 group-hover:text-white">
+                <AutoDialIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Playbooks</p>
+              <p className="opacity-60 text-sm">
+                Supercharge prospecting and service
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-yellow-100 text-yellow-700 group-hover:bg-yellow-700 group-hover:text-white">
-              <TeamsIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">User Management</p>
-            <p className="opacity-60 text-sm">
-              Manage users and team preferences
-            </p>
-          </div>
+          <Link href="/users-and-teams">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-yellow-100 text-yellow-700 group-hover:bg-yellow-700 group-hover:text-white">
+                <TeamsIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">User Management</p>
+              <p className="opacity-60 text-sm">
+                Manage users and team preferences
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-gray-100 text-black group-hover:bg-black group-hover:text-white">
-              <SettingsIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Settings</p>
-            <p className="opacity-60 text-sm">
-              Voice, Chat, Integration and Dock Settings
-            </p>
-          </div>
+          <Link href="/settings">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-gray-100 text-black group-hover:bg-black group-hover:text-white">
+                <SettingsIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Settings</p>
+              <p className="opacity-60 text-sm">
+                Voice, Chat, Integration and Dock Settings
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group ">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-cyan-100 text-cyan-700 group-hover:bg-cyan-700 group-hover:text-white">
-              <AppsIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Apps</p>
-            <p className="opacity-60 text-sm">
-              Native CTI for Salesforce and Chrome Extension
-            </p>
-          </div>
+          <Link href="/apps">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group ">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-cyan-100 text-cyan-700 group-hover:bg-cyan-700 group-hover:text-white">
+                <AppsIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Apps</p>
+              <p className="opacity-60 text-sm">
+                Native CTI for Salesforce and Chrome Extension
+              </p>
+            </a>
+          </Link>
 
-          <div className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
-            <div className="w-10 h-10 grid place-items-center rounded-full bg-purple-100 text-purple-700 group-hover:bg-purple-700 group-hover:text-white">
-              <DeveloperIcon />
-            </div>
-            <p className="text-lg font-semibold mt-3 mb-1">Developers</p>
-            <p className="opacity-60 text-sm">
-              Open APIs, custom functions and API Keys
-            </p>
-          </div>
+          <Link href="/developers">
+            <a className="p-6 shadow-card rounded-md bg-white cursor-pointer group">
+              <div className="w-10 h-10 grid place-items-center rounded-full bg-purple-100 text-purple-700 group-hover:bg-purple-700 group-hover:text-white">
+                <DeveloperIcon />
+              </div>
+              <p className="text-lg font-semibold mt-3 mb-1">Developers</p>
+              <p className="opacity-60 text-sm">
+                Open APIs, custom functions and API Keys
+              </p>
+            </a>
+          </Link>
         </div>
       </section>
 
@@ -150,7 +164,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8">
-            <div className="bg-white shadow-soft rounded-md px-6 py-8 flex flex-col items-center justify-center">
+            <div className="bg-white shadow-soft rounded-md px-6 py-8 flex flex-col items-center justify-center text-center">
               <ChromeIcon />
               <p className="my-4">Chrome Extension</p>
               <a
@@ -160,7 +174,7 @@ export default function Home() {
                 Download
               </a>
             </div>
-            <div className="bg-white shadow-soft rounded-md px-6 py-8 flex flex-col items-center justify-center">
+            <div className="bg-white shadow-soft rounded-md px-6 py-8 flex flex-col items-center justify-center text-center">
               <SFIcon />
               <p className="my-4">Native CTI</p>
               <a
