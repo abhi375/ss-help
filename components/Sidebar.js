@@ -4,14 +4,16 @@ import ReactMarkdown from "react-markdown/with-html";
 
 export default function Sidebar({ post }) {
   return (
-    <div>
-      <h1>Sidebar</h1>
-      {console.log("inside ss, ", post)}
-      <ReactMarkdown
-        className="mb-4"
-        escapeHtml={false}
-        source={post.content}
-      />
+    <div className="relative max-w-[760px] w-full h-full overscroll-y-auto mx-auto">
+      <div className="max-w-[760px] mx-auto min-h-full flex flex-col overflow-hidden">
+        <h1>Sidebar</h1>
+
+        <ReactMarkdown
+          className="mb-4"
+          escapeHtml={false}
+          source={post.content}
+        />
+      </div>
     </div>
   );
 }

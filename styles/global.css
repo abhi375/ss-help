@@ -1,27 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 
 .wrapper {
-    @apply max-w-screen-lg mx-auto h-full;
+  @apply max-w-screen-lg mx-auto h-full;
 }
 
 h1 {
-    @apply text-4xl font-bold;
+  @apply text-4xl font-bold;
 }
 
 h2 {
-    @apply text-3xl font-bold;
+  @apply text-3xl font-bold;
 }
 
 p {
-    @apply text-lg leading-relaxed;
+  @apply text-lg leading-relaxed;
 }
 
 .content-view {
-  height: calc(100vh - 120px);
-  margin-top: 120px;
+  height: calc(100vh - 112px);
+  top: 112px;
+  position: relative;
 }
 
 @tailwind utilities;

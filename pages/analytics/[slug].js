@@ -7,7 +7,6 @@ export default function Post({ post }) {
   return (
     <div>
       <Nav />
-      {console.log("post inside sidebar", post)}
     </div>
   );
 }

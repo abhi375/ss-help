@@ -71,12 +71,11 @@ export default function TabBar() {
   };
 
   useEffect(() => {
-    console.log("path is ", router.pathname);
     getData(router.pathname);
   }, []);
 
   return (
-    <section className="bg-gray-50 mt-16 h-14 px-8 fixed top-0 left-0 right-0">
+    <section className="bg-gray-50 mt-14 h-14 px-8 fixed top-0 left-0 right-0">
       <div className="h-full">
         <div className="flex items-center h-full">
           <div className="w-8 h-8 grid place-items-center rounded-full bg-gray-200">

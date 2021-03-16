@@ -4,7 +4,7 @@ import { Logo } from "../components/Icons.js";
 export default function Nav({ isHome }) {
   return (
     <nav
-      className={`fixed z-50 top-0 left-0 right-0 h-16  px-8 ${
+      className={`fixed z-50 top-0 left-0 right-0 h-14  px-8 ${
         isHome ? "bg-gray-50" : "bg-white"
       }`}
     >
