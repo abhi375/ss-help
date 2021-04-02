@@ -93,14 +93,8 @@ export default function NavSidebar() {
   ]);
 
   return (
-    <nav className="col-span-1 p-6 grid grid-cols-1 gap-2">
+    <nav className="col-span-1 px-6 py-12 grid grid-cols-1 gap-2 sticky top-0">
       {navItems.map((item) => {
-        console.log(
-          "pathname ",
-          router.pathname,
-          " and item link is ",
-          item.link
-        );
         return (
           <Link key={item.label} href={item.link}>
             <a>

@@ -20,5 +20,11 @@
   .page {
     height: calc(100vh - 64px);
     overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .post {
+    height: calc(100vh - 64px);
+    overflow-y: auto;
   }
 }

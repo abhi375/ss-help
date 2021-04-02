@@ -17,9 +17,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <main className="">
       <Nav />
-      <div className="mt-16 page grid grid-cols-5 items-start bg-white dark:bg-gray-900 text-black dark:text-white">
+      <div className="mt-16 page grid grid-cols-5 gap-8 items-start bg-white dark:bg-gray-900 text-black dark:text-white">
         <NavSidebar />
-        <div className="col-span-4 p-6">
+        <div className="col-span-4 w-full h-full">
           <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
             <Component {...pageProps} key={router.route} />
           </AnimatePresence>
