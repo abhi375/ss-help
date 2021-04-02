@@ -66,7 +66,7 @@ export default function Nav() {
             placeholder="Search"
             className="w-full h-full focus:outline-none font-light bg-transparent"
           />
-          <SearchIcon className="w-5 h-5 dark:text-gray-500 text-black" />
+          <SearchIcon className="w-5 h-5 dark:text-gray-500 text-gray-500" />
         </div>
         <div className="grid grid-flow-col auto-cols-max gap-8">
           <a
