@@ -78,6 +78,16 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
+"@heroicons/react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.0.tgz#16a6147f665434b68f401f050a6cb1d68cf819bc"
+  integrity sha512-BHu+zsJ37B8RsspItwn2yTrph1Jj+k8YhVGV/UmAbxjhphC+RPdYMKzAJm9kGtA526loPtP+FYQM9GdMYTe13Q==
+
+"@netlify/classnames-template-literals@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@netlify/classnames-template-literals/-/classnames-template-literals-1.0.0.tgz#72694be5bbd5f5093828a7b4e5e6c3a84f1af212"
+  integrity sha512-ni7KDkcbkzkFVOCqZY8M5hVo0XL5qH8htlQlbF+ZksDTT3NYqGaJwZYS8EJCYzW2tx7IcuAdvVZvGa7s7XLc9A==
+
 "@next/env@10.0.8":
   version "10.0.8"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.0.8.tgz#3306c9de20ef187438affbafce0ef966c9e43c3b"

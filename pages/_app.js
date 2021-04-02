@@ -2,6 +2,8 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 
 import "tailwindcss/tailwind.css";
+import Nav from "../components/Nav";
+import NavSidebar from "../components/NavSidebar";
 import "../styles/global.css";
 
 function handleExitComplete() {
@@ -13,11 +15,17 @@ function handleExitComplete() {
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <>
-      <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
-    </>
+    <main className="">
+      <Nav />
+      <div className="mt-16 page grid grid-cols-5 items-start bg-white dark:bg-gray-900 text-black dark:text-white">
+        <NavSidebar />
+        <div className="col-span-4 p-6">
+          <AnimatePresence exitBeforeEnter onExitComplete={handleExitComplete}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </div>
+      </div>
+    </main>
   );
 }
 

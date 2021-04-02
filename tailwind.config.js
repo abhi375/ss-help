@@ -2,7 +2,7 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ["Inter", "sans-serif"],
@@ -16,6 +16,7 @@ module.exports = {
         rose: colors.rose,
         cyan: colors.cyan,
         leaf: "#146A5B",
+        gray: colors.gray,
       },
       width: {
         640: "640px",
