@@ -49,8 +49,8 @@ export default function PostPage({ title, posts }) {
                   <h2 className="text-2xl group-hover:text-accent duration-300">
                     {post.title}
                   </h2>
-                  <p className="my-2 opacity-75">{post.excerpt}</p>
-                  <p className="text-accent flex items-center">
+                  <p className="my-2 text-base opacity-75">{post.excerpt}</p>
+                  <p className="text-accent text-base flex items-center">
                     <span className="block mr-1">Read More</span>
                     <ChevronRightIcon className="w-5 h-5 mt-0.5 transform group-hover:translate-x-1 duration-300 transition-transform" />
                   </p>
