@@ -73,7 +73,7 @@ export default function PostPage({ title, posts }) {
               {posts.filter((post) => post.slug === router.query.slug)[0].title}
             </h1>
             <ReactMarkdown
-              className="prose prose-lg mx-auto pb-16"
+              className="prose mx-auto pb-16"
               escapeHtml={false}
               source={
                 posts.filter((post) => post.slug === router.query.slug)[0]
