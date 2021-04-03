@@ -1,9 +1,10 @@
 import ctl from "@netlify/classnames-template-literals";
 import { ChevronRightIcon } from "@heroicons/react/solid";
-import ReactMarkdown from "react-markdown/with-html";
+import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import PostSidebar from "./PostSidebar";
 
 const PostRowClass = ctl(`
   block
@@ -19,6 +20,7 @@ const PostRowClass = ctl(`
 
 export default function PostPage({ title, posts }) {
   const router = useRouter();
+  console.log("router is ", router);
   return (
     <motion.section
       initial={{ opacity: 0, x: -20 }}
@@ -40,11 +42,12 @@ export default function PostPage({ title, posts }) {
             return (
               <Link
                 key={post.slug}
-                href={`${router.pathname}/?slug=${post.slug}`}
+                href={`${router.pathname}?slug=${post.slug}`}
                 as={`${router.pathname}/${post.slug}`}
                 // href={`/analytics/${post.slug}`}
               >
                 <a className={PostRowClass}>
+                  {console.log(post.slug, " and ", router.pathname)}
                   <h2 className="text-2xl group-hover:text-accent duration-300">
                     {post.title}
                   </h2>
@@ -61,26 +64,9 @@ export default function PostPage({ title, posts }) {
       </motion.div>
       <AnimatePresence>
         {!!router.query.slug && (
-          <motion.div
-            className="bg-white z-20 p-16 fixed right-0 top-16 bottom-0 overflow-auto shadow-lg w-[720px]"
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: "0%" }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ duration: 0.3, easings: [0.5, 0.12, 0.49, 0.84] }}
-          >
-            <h1>
-              {posts.filter((post) => post.slug === router.query.slug)[0].title}
-            </h1>
-            <ReactMarkdown
-              className="prose mx-auto pb-16"
-              escapeHtml={false}
-              source={
-                posts.filter((post) => post.slug === router.query.slug)[0]
-                  .content
-              }
-            />
-            <p onClick={() => router.replace(router.pathname)}>Close</p>
-          </motion.div>
+          <PostSidebar
+            post={posts.filter((post) => post.slug === router.query.slug)[0]}
+          />
         )}
       </AnimatePresence>
     </motion.section>

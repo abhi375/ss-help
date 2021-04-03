@@ -1,7 +1,7 @@
 import { getAllPosts } from "../../lib/api";
 import PostPage from "../../components/PostPage";
 
-export default function AppsPage({ allPosts }) {
+export default function AnalyticsPage({ allPosts }) {
   return <PostPage title="Apps" posts={allPosts} />;
 }
 
