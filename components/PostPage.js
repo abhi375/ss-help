@@ -19,7 +19,6 @@ const PostRowClass = ctl(`
 
 export default function PostPage({ title, posts }) {
   const router = useRouter();
-  console.log("router is ", router);
   return (
     <motion.section
       initial={{ opacity: 0, x: -20 }}
