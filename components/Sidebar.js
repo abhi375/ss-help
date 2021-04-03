@@ -1,5 +1,3 @@
-import { getPostBySlug, getAllPosts } from "../lib/api";
-import markdownToHtml from "../lib/markdownToHtml";
 import ReactMarkdown from "react-markdown/with-html";
 
 export default function Sidebar({ post }) {

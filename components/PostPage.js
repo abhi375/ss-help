@@ -19,7 +19,7 @@ const PostRowClass = ctl(`
 
 export default function PostPage({ title, posts }) {
   const router = useRouter();
-
+  console.log("router is ", router);
   return (
     <motion.section
       initial={{ opacity: 0, x: -20 }}
@@ -41,8 +41,8 @@ export default function PostPage({ title, posts }) {
             return (
               <Link
                 key={post.slug}
-                href={`/analytics/?slug=${post.slug}`}
-                as={`/analytics/${post.slug}`}
+                href={`${router.pathname}/?slug=${post.slug}`}
+                as={`${router.pathname}/${post.slug}`}
                 // href={`/analytics/${post.slug}`}
               >
                 <a className={PostRowClass}>
@@ -63,7 +63,7 @@ export default function PostPage({ title, posts }) {
       <AnimatePresence>
         {!!router.query.slug && (
           <motion.div
-            className="bg-white z-20 p-16 fixed right-0 top-16 bottom-0 overflow-auto shadow-lg"
+            className="bg-white z-20 p-16 fixed right-0 top-16 bottom-0 overflow-auto shadow-lg w-[720px]"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: "0%" }}
             exit={{ opacity: 0, x: "100%" }}
@@ -80,7 +80,7 @@ export default function PostPage({ title, posts }) {
                   .content
               }
             />
-            <p onClick={() => router.push("/analytics/")}>Close</p>
+            <p onClick={() => router.replace(router.pathname)}>Close</p>
           </motion.div>
         )}
       </AnimatePresence>

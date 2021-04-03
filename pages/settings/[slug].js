@@ -10,7 +10,7 @@ export async function getStaticProps({ params }) {
   const post = getPostBySlug(
     params.slug,
     ["title", "date", "slug", "author", "content"],
-    "content/analytics"
+    "content/settings"
   );
   const content = await markdownToHtml(post.content || "");
 
@@ -25,7 +25,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"], "content/analytics");
+  const posts = getAllPosts(["slug"], "content/settings");
 
   return {
     paths: posts.map((post) => {
